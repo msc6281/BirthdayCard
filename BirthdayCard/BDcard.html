@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday, Janu!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom, #ffe6f0, #f0f8ff);
+      overflow-x: hidden;
+      text-align: center;
+    }
+
+    h1, h2 {
+      color: #e60073;
+      margin: 20px 0;
+      font-family: 'Pacifico', cursive;
+    }
+
+    .balloons {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .balloon {
+      position: absolute;
+      bottom: -150px;
+      width: 50px;
+      animation: float 10s infinite ease-in;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0); opacity: 1; }
+      100% { transform: translateY(-150vh) rotate(360deg); opacity: 0; }
+    }
+
+    .section {
+      padding: 30px 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .special-message {
+      background: #ffeef2;
+      border-left: 5px solid #ff4d94;
+      margin: 40px auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 700px;
+      font-style: italic;
+      color: #333;
+      box-shadow: 0 0 15px rgba(255, 192, 203, 0.4);
+    }
+
+    .candles-section img {
+      margin: 10px auto;
+      cursor: pointer;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+    }
+
+    .birthday-wishes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .wish {
+      background: #fff4fc;
+      border: 1px solid #ffcce6;
+      padding: 15px 20px;
+      border-radius: 10px;
+      width: 200px;
+      font-size: 14px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+
+    .wish:hover {
+      transform: scale(1.05);
+      background: #ffebf5;
+    }
+
+    footer {
+      background: linear-gradient(to right, #ffb3ec, #b3d9ff);
+      padding: 20px;
+      font-size: 14px;
+      color: #333;
+      margin-top: 40px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    audio {
+      display: block;
+      margin: 20px auto;
+    }
+
+    .music-control {
+      font-size: 14px;
+      margin-top: 10px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="balloons">
+    <img class="balloon" src="ballon.gif" style="left:10%; animation-delay: 0s;">
+    <img class="balloon" src="balloon1.jpg" style="left:30%; animation-delay: 1s;">
+    <img class="balloon" src="balloon1.jpg" style="left:50%; animation-delay: 2s;">
+    <img class="balloon" src="ballon.gif" style="left:70%; animation-delay: 1.5s;">
+    <img class="balloon" src="balloon1.jpg" style="left:90%; animation-delay: 0.5s;">
+	<img class="balloon" src="ballon.gif" style="left:40%; animation-delay: 0.5s;">
+  </div>
+
+  <div class="section">
+    <h1>🎂 Happy Birthday, Janu! 🎉</h1>
+    <p>To my amazing, crazy, and forever best friend 💕</p>
+    <p style="max-width: 600px; margin: auto; color: #444; font-size: 16px;">
+      Today is all about celebrating YOU and the incredible person you are. Here's to another year of amazing adventures together! 🎉
+    </p>
+  </div>
+
+  <div class="section candles-section">
+    <h2>Make a Wish and Blow Out the Candles! 🕯️</h2>
+    <img src="candOn1.webp" width="500" height="300" alt="Candle" onclick="blowCandle(this)">
+    <p id="candle-msg">Click on the candle to blow it out!</p>
+  </div>
+
+  <div class="section">
+    <h2>A Special Message Just for You</h2>
+    <p>Dear Best Friend,</p>
+    <p>
+      On this special day, I want you to know how grateful I am to have you in my life.
+      Your friendship means the world to me.
+    </p>
+    <div class="special-message">
+      "In a world full of ordinary people, I found a rare soul — you.<br>
+      You're not just my best friend, Janu. You are my calm, my chaos, my safe space, and my spark.<br>
+      You matter to me more than words can ever say.<br>
+      You are my most beautiful memory, my biggest blessing, and my forever irreplaceable person.<br>
+      Happy Birthday, Janu — you're truly one of a kind."
+    </div>
+    <p style="color:#e60073; font-weight:bold;">Happy Birthday, Beautiful Soul! 🎂 ✨</p>
+    <p>With all my love and best wishes,<br>Your Best Friend Forever 💙</p>
+  </div>
+
+  <div class="section">
+    <h2>Birthday Wishes for You</h2>
+    <div class="birthday-wishes">
+      <div class="wish">🎁 May your day be filled with happiness and your year with joy!</div>
+      <div class="wish">🎁 Wishing you love, laughter, and all your heart desires!</div>
+      <div class="wish">🎁 Here's to another year of being absolutely amazing!</div>
+      <div class="wish">🎁 All your dreams come true this year!</div>
+      <div class="wish">🎁 You deserve all the wonderful things life has to offer!</div>
+      <div class="wish">🎁 Cheers to another year of friendship and fun!</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>💖 Our Song Together</h2>
+    <audio controls>
+      <source src="OMyFriend.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+    <div class="music-control">Press Play to enjoy our song 🎶</div>
+  </div>
+
+  <footer>
+    Hope your birthday is as special as you are! 💫<br>
+    Created with love for an amazing friend 💙<br>
+    Happy Birthday! May this year be your best one yet! ✨<br>
+    ❤️❤️ Love you my friend ❤️❤️
+  </footer>
+
+<script>
+  function blowCandle(el) {
+    const msg = document.getElementById("candle-msg");
+    if (el.src.includes("candOn1.webp")) {
+      el.src = "candOf2.webp";
+      msg.innerText = "You made a wish! 🎉 Click the candle to light it again!";
+    } else {
+      el.src = "candOn1.webp";
+      msg.innerText = "Click on the candle to blow it out!";
+    }
+  }
+</script>
+
+
+</body>
+</html>
